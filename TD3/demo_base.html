@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Initiation au HTML/CSS</title>
+
+</head>
+
+<body>
+
+    <!-- En-tête du site / Page -->
+    <header id="header-site">
+        <h1>Article : Premiers pas en HTML et CSS</h1>
+        <nav>
+            <ul>
+                <li><a href="#intro">Introduction</a></li>
+                <li><a href="#section-html">Balises HTML</a></li>
+                <li><a href="#section-css">Sélecteurs CSS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenu principal -->
+    <main>
+        <article>
+            <!-- Introduction -->
+            <section id="intro">
+                <h2>Introduction</h2>
+                <p>
+                    Le langage <strong>HTML</strong> (HyperText Markup Language) permet de structurer
+                    une page web, tandis que <em>CSS</em> (Cascading Style Sheets) gère sa mise en forme.
+                </p>
+                <p>
+                    Dans cet article, nous allons découvrir les bases de HTML et CSS,
+                    ainsi que la manière de les relier pour créer des pages web modernes.
+                </p>
+            </section>
+
+            <!-- Balises HTML -->
+            <section id="section-html">
+                <h2>Les balises HTML</h2>
+                <p>
+                    Les balises HTML décrivent la structure de la page. Par exemple,
+                    la balise <code>&lt;p&gt;</code> est utilisée pour définir un paragraphe.
+                </p>
+                <p class="important">
+                    Conseils : Utilisez des balises sémantiques (<code>&lt;header&gt;</code>,
+                    <code>&lt;main&gt;</code>, <code>&lt;footer&gt;</code>, etc.) pour donner du sens
+                    à votre document.
+                </p>
+            </section>
+
+            <!-- Sélecteurs CSS -->
+            <section id="section-css">
+                <h2>Sélecteurs CSS</h2>
+                <p>
+                    Les sélecteurs CSS permettent de cibler précisément des éléments pour les styliser.
+                    En voici quelques exemples :
+                </p>
+                <ul>
+                    <li>Sélecteurs de balise (ex: <code>p</code>)</li>
+                    <li>Sélecteur d’ID (ex: <code>#header-site</code>)</li>
+                    <li>Sélecteur de classe (ex: <code>.important</code>)</li>
+                    <li>Sélecteurs descendants (ex: <code>article &gt; p</code>)</li>
+                    <li>Sélecteurs multiples (ex: <code>h2, h3</code>)</li>
+                    <li>Pseudo-classes (ex: <code>a:hover</code>)</li>
+                    <li>Pseudo-éléments (ex: <code>p::first-line</code>)</li>
+                </ul>
+            </section>
+        </article>
+    </main>
+
+    <!-- Exemple d’aside pour un contenu complémentaire -->
+    <aside class="info">
+        <h3>Note :</h3>
+        <p>
+            Une bonne pratique consiste à séparer le contenu (HTML) de la présentation (CSS).
+            Cela facilite la maintenance et l’évolution des sites web.
+        </p>
+    </aside>
+
+    <!-- Pied de page -->
+    <footer>
+        <p>&copy; 2026 – Programmation WEB C/S</p>
+    </footer>
+
+</body>
+
+</html>
