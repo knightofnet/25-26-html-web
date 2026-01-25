@@ -1,0 +1,174 @@
+# Bilan TD1 + TD2 — Ce que vous devez maîtriser
+
+## 4) Utiliser un serveur web local
+
+### Avec XAMPP sous Windows
+
+Un serveur web local sert à tester vos pages en conditions “réalistes” : URL en `http://localhost`, requêtes HTTP, et plus tard PHP/BDD. XAMPP est un paquet qui installe facilement un serveur web local.
+
+**Intérêt / objectif :**
+
+Arrêter de travailler uniquement en `file://` et se rapprocher d’un vrai fonctionnement client/serveur. C’est indispensable dès qu’on fait des formulaires + traitements serveur (plus tard).
+
+> Pourquoi `localhost` ? C'est votre propre ordinateur qui fait office de serveur web. `localhost` est un nom spécial qui désigne l'ordinateur local. L'adresse IP associée est `127.0.0.1`.
+
+### Ce que vous devez savoir faire (procédure générale)
+
+> ⚠️ Les écrans peuvent varier selon les versions de Windows et de XAMPP.
+
+1. Installer XAMPP
+
+   - Téléchargez XAMPP depuis le [site officiel](https://www.apachefriends.org/fr/index.html).
+   - Lancez l’installeur et gardez les options par défaut.
+
+2. Lancez le panneau de contrôle XAMPP
+
+   - Ouvrez **XAMPP Control Panel** (depuis le menu Démarrer par exemple).
+   - Démarrez **Apache** (bouton “Start”)
+   ![XAMP Control Panel](ressImg/xampControlPanel.png)
+
+3. Mettez vos fichiers dans le dossier servi par Apache
+
+   - Le serveur Apache a un dossier “racine” (souvent `htdocs`. Dans la fenêtre XAMPP, cliquer sur “Explorer” pour ouvrir l’explorateur Windows à l’emplacement correct).
+   - Créez un dossier de projet, par exemple :
+     - `htdocs/TD3/`
+     - puis mettez dedans vos fichiers HTML (ex: `index.html`, etc.) et autres ressources (CSS, images, etc.).
+     ![Dossier TD3 dans l'explorateur](ressImg/xampDossierTD3.png)
+
+4. Accédez à votre site
+   - Ouvrez un navigateur et allez sur :
+     - `http://localhost/TD3/`
+     ![Dossier TD3 dans le navigateur](ressImg/xampDossierTD3Localhost.png)
+
+**A retenir :**
+
+- XAMPP + Apache = serveur web local.
+- Vos fichiers doivent être dans le dossier servi (ex: `htdocs`). XAMPP utilise le dossier `htdocs` par défaut, comme racine du serveur web. C'est l'équivalent du dossier `public_html` sur les machines Linux de la fac.
+
+### Avec un serveur web local sur Linux (Ubuntu)
+
+Si vous utilisez Linux (Ubuntu par exemple), vous pouvez installer un serveur web local avec Apache et PHP en utilisant les paquets disponibles.
+
+**Installer Apache et PHP**
+
+1. Ouvrez un terminal.
+2. Mettez à jour la liste des paquets :
+    ```bash
+    sudo apt update
+    ```
+3. Installez Apache et PHP :
+
+    ```bash
+    sudo apt install apache2 php libapache2-mod-php
+    ```
+
+4. Démarrez le serveur Apache :
+
+    ```bash
+    sudo systemctl start apache2
+    ```
+
+5. Vérifiez que le serveur fonctionne en ouvrant un navigateur et en allant sur `http://localhost`. Vous devriez voir la page par défaut d'Apache.
+
+### Avec Docker sur Linux (et MacOS/Windows) - Plus complexe
+
+Il est aussi possible d’utiliser Docker pour créer un serveur web local. Cela demande plus de configuration, mais c’est plus proche d’un vrai serveur de production. Si vous utilisez Linux sur votre machine locale, vous pouvez suivre cette procédure.
+
+**Installer Docker**
+
+- Suivez la procédure officielle pour [installer Docker sur Linux](https://docs.docker.com/engine/install/).
+
+**Créer un serveur web local avec Docker, Apache, PHP et MariaDB**
+
+1. Créez un dossier pour votre serveur local, par exemple `serveurLocal`.
+2. Dans ce dossier, créez un sous-dossier `php` et un fichier `Dockerfile` dedans avec le contenu suivant :
+
+  ```Dockerfile
+   FROM php:8.1-apache
+
+   # Extensions nécessaire pour Mysql ou MariaDB
+   RUN docker-php-ext-install pdo pdo_mysql mysqli
+
+   # Configuration Apache pour autoriser la visualisation des dossiers et les .htaccess
+   RUN grep -q '<Directory /var/www/>' /etc/apache2/sites-available/000-default.conf || (awk 'index($0,"</VirtualHost>"){print "\t<Directory /var/www/>"; print "\t\tOptions Indexes FollowSymLinks"; print "\t\tAllowOverride All"; print "\t</Directory>";} {print}' /etc/apache2/sites-available/000-default.conf > /tmp/000-default.conf && mv /tmp/000-default.conf /etc/apache2/sites-available/000-default.conf)
+
+  ```
+3. Dans le dossier `serveurLocal`, créez un fichier `docker-compose.yml` avec le contenu suivant (à adapter selon vos besoins) :
+
+```yaml
+services:
+  web:
+    build: ./php
+    container_name: web
+    ports:
+      - "${WEB_PORT}:80"
+    volumes:
+      - ./public_html:/var/www/html
+    depends_on:
+      - db
+    restart: unless-stopped
+  
+  db:
+    image: mariadb:10.11
+    container_name: db
+    environment:
+      MARIADB_ROOT_PASSWORD: ${MARIADB_ROOT_PASSWORD}
+      MARIADB_DATABASE: ${MARIADB_DATABASE}
+      MARIADB_USER: ${MARIADB_USER}
+      MARIADB_PASSWORD: ${MARIADB_PASSWORD}
+    volumes:
+      - db_data:/var/lib/mysql
+    restart: unless-stopped
+  
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin
+    environment:
+      PMA_HOST: db      
+      PMA_PORT: 3306
+    ports:
+      - "${PMA_PORT}:80"
+    depends_on:
+      - db
+    restart: unless-stopped
+
+volumes:
+  db_data:
+```
+
+4. Créez un fichier `.env` dans le dossier `serveurLocal` pour définir les variables d’environnement (à adapter selon vos besoins):
+
+```shell
+# Ports exposés sur la machine hôte
+WEB_PORT=8000
+PMA_PORT=8081
+
+# MariaDB
+MARIADB_ROOT_PASSWORD=root
+MARIADB_DATABASE=appdb
+MARIADB_USER=appuser
+MARIADB_PASSWORD=apppwd
+```
+
+5. Créez un dossier `public_html` dans le dossier `serveurLocal`. C’est ici que vous mettrez vos fichiers HTML (l'équivalent du dossier `htdocs` dans XAMPP pour Windows).
+
+6. Lancez les conteneurs Docker depuis le dossier `serveurLocal` :
+
+```shell
+docker-compose up -d
+```
+
+7. Accédez à votre site web local via l’URL `http://localhost:8000` et à phpMyAdmin via `http://localhost:8081`.
+
+8. Pour arrêter les conteneurs, utilisez la commande suivante dans le dossier `serveurLocal` :
+
+```shell
+docker-compose down
+```
+
+**A retenir :**
+
+- Docker + Apache + PHP = serveur web local.
+- Vos fichiers doivent être dans le dossier `public_html` (ou celui que vous avez monté dans le volume Docker).
+- Vous pouvez installer Docker (et donc utiliser cette méthode) sur MacOS (voir ici : https://docs.docker.com/desktop/install/mac-install/). A tester, je n'ai pas de Mac pour vérifier :/ 
+- Sur Windows aussi, Docker est disponible, mais l'installation est plus complexe (https://docs.docker.com/desktop/install/windows-install/). Dans ce cas, XAMPP reste plus simple. 

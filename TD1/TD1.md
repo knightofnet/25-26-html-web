@@ -30,4 +30,4 @@ Mozilla Firefox est un navigateur web libre et gratuit disponible pour PC (Windo
 
 XAMPP est un paquetage libre et gratuit qui installe un serveur web Apache, une base de données MySQL, et des interpréteurs pour les scripts PHP.
 
-Voir les instructions d'installation dans le TD4 : [Serveur local sur Windows - XAMPP](<../TD3/Retour sur le TD1 & TD2/4. Serveur local sur Windows - XAMPP.md>).
+Voir les instructions d'installation dans le TD4 : [Serveur local sur Windows - XAMPP](<../TD3/Retour sur le TD1 & TD2/4. Serveur local votre ordinateur.md>).
