@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>Ma première page</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+
+    <h1>Syntaxe avancée avec des images alternatives</h1>
+
+    <p>Il faut pour cela utiliser la balise </p>
+    <pre>&lt;picture&gt;</pre>
+    <p>Puis inclure à l'intérieur, dans l'ordre les alternatives avec la balise </p>
+    <pre>&lt;source&gt;</pre>
+    <p>Et enfin la balise </p>
+    <pre>&lt;img&gt;</pre>
+    
+    <picture>
+        <source srcset="undraw_in-the-zone_07y7.svg" type="image/svg+xml">
+        <source srcset="undraw_in-the-zone_07y7.png" type="image/png">
+        <img src="undraw_in-the-zone_07y7.gif" alt="image de travailleur" width="600">
+    </picture>
+   
+        
+    
+</body>
+
+</html>

@@ -17,8 +17,7 @@
 
 Cette structure de base est essentielle pour toute page HTML. Le doctype déclare le type de document, la balise `<html>` englobe tout le contenu, la balise `<head>` contient les métadonnées et la balise `<body>` contient le contenu visible de la page. C'est le point de départ pour **toute** création de page web.
 
-
-## Tableaux 
+## Tableaux
 
 Structure simple :
 
@@ -97,7 +96,7 @@ La balise `<pre>` est utilisée pour afficher du texte préformaté, où les esp
 
 ## Images et chemins relatifs
 
-Lorsque vous insérez une image dans une page HTML, il est important de comprendre comment fonctionnent les chemins vers les fichiers. 
+Lorsque vous insérez une image dans une page HTML, il est important de comprendre comment fonctionnent les chemins vers les fichiers.
 
 De base, vous écrivez des balises HTML dans un fichier html. Ce fichier se trouve quelque part dans votre arborescence de fichiers / dans votre disque dur. Par exemple, imaginons que votre fichier HTML se trouve dans le dossier `Documents/TD1` et qu'il se nomme `exo1.html`. Dans ce dossier, vous avez également une image nommée `photo.jpg`. Se trouve aussi, un dossier `images` qui contient une autre image nommée `image2.png`.
 
@@ -128,7 +127,7 @@ Plusieurs cas de figure peuvent se présenter :
 
 * Si l'image se trouve dans un sous-dossier (`images`), vous devez inclure le nom du dossier dans le chemin :
 
-```html 
+```html
 <img src="images/image2.png" alt="Description de l'image">
 ```
 
