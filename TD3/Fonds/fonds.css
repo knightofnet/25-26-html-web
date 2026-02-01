@@ -1,0 +1,141 @@
+body {
+    display: grid;
+    grid-template-columns: repeat(3, 150px);
+    grid-template-rows: repeat(5, 150px);
+
+    gap: 0.5rem;
+
+    background-color: #dcdcdc;
+}
+
+div {
+    width: 100%;
+
+    height: 100%;
+    border: 2px solid black;
+    box-shadow: 2px 2px 5px gray;
+
+    background-color: white;
+}
+
+
+.fond-bleu {
+    background-color: lightblue;
+}
+
+.fond-vert {
+    background-color: lightgreen;
+}
+
+.fond-rouge {
+    background-color: lightcoral;
+}
+
+
+.fond-degrade-A {
+    background: linear-gradient(to right, yellow, orange, red);
+}
+
+.fond-degrade-B {
+    background: linear-gradient(to bottom, lightblue, blue);
+}
+
+.fond-degrade-C {
+    background: radial-gradient(circle, white, lightgray, gray, black);
+}
+
+
+.fond-image-A {
+    background-image: url('https://knightof.net/fac/td1/soleil.jpg');
+    background-size: contain;
+}
+
+.fond-image-B {
+    background-image: url('https://knightof.net/fac/td1/soleil.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.fond-image-C {
+    background-image: url('https://knightof.net/fac/td1/soleil.jpg');
+    background-repeat: no-repeat;
+
+    background-position: top left;
+    background-size: 50% 50%;
+
+}
+
+.fond-image-D {
+    background-image: url('https://knightof.net/fac/td1/soleil.jpg');
+    background-repeat: no-repeat;
+
+    background-position: bottom right;
+    background-size: 50% 50%;
+
+}
+
+.fond-image-E {
+    background-image: url('https://knightof.net/fac/td1/soleil.jpg');
+    background-repeat: repeat-y;
+
+    background-position: top left;
+    background-size: 50% 50%;
+
+}
+
+.fond-image-F {
+    background-image: url('https://knightof.net/fac/td1/soleil.jpg');
+    background-repeat: repeat-x;
+
+    background-position: top left;
+    background-size: 50% 50%;
+
+}
+
+.fond-anime {
+    animation: AnimationName 30s ease infinite;
+    background: linear-gradient(to right, yellow, orange, red);
+    background-size: 200% 200%;
+}
+
+@-webkit-keyframes AnimationName {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@-moz-keyframes AnimationName {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@keyframes AnimationName {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}

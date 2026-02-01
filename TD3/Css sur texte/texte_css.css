@@ -1,0 +1,127 @@
+hr {
+    border: none;
+    border-top: 2px solid black;
+    margin: 1rem 0;
+}
+
+/* Styles pour le texte */
+
+.gras {
+    font-weight: bold;
+}
+
+.tres-gras {
+    font-weight: bolder;
+}
+
+.fin {
+    font-weight: lighter;
+}
+
+.italique {
+    font-style: italic;
+}
+
+/* Couleurs du texte */
+
+.rouge {
+    color: red;
+}
+
+.vert {
+    color: green;
+}
+
+.bleu {
+    color: blue;
+}
+
+/* Tailles du texte */
+
+.tres-petit {
+    font-size: x-small;
+}
+
+.petit {
+    font-size: small;
+}
+
+.moyen {
+    font-size: medium;
+}
+
+.grand {
+    font-size: large;
+}
+
+.tres-grand {
+    font-size: x-large;
+}
+
+.size-10px {
+    font-size: 10px;
+}
+
+.size-20px {
+    font-size: 20px;
+}
+
+.size-30px {
+    font-size: 30px;
+}
+
+
+/* Effets de décoration du texte */
+
+.souligne {
+    text-decoration: underline;
+}
+
+
+.barre {
+    text-decoration: line-through;
+}
+
+.double-barre {
+    text-decoration: line-through double;
+}
+
+.exposant {
+    vertical-align: super;
+    font-size: smaller;
+}
+
+.indice {
+    vertical-align: sub;
+    font-size: smaller;
+}
+
+.smallcaps {
+    font-variant: small-caps;
+}
+
+.majuscule {
+    text-transform: uppercase;
+}
+
+.ombre {
+    text-shadow: 2px 2px 4px #888888;
+}
+
+/* Alignement du texte */
+
+.align-gauche {
+    text-align: left;
+}
+
+.align-centre {
+    text-align: center;
+}
+
+.align-droite {
+    text-align: right;
+}
+
+.align-justifie {
+    text-align: justify;
+}
