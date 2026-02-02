@@ -1,0 +1,54 @@
+body {
+    background-color: rgb(204, 255, 255);
+
+    font-family: 'Times New Roman';
+    color: navy;
+}
+
+h1 {
+    border: 3px double white;
+    background-color: navy;
+
+    text-align: center;
+    color: white;
+    font-size: 18pt;
+
+    width: 60%;
+}
+
+h2 {
+    font-size: 16pt;
+    text-decoration: underline;
+    color: red;
+}
+
+h3 {
+    font-size: 14pt;
+    font-style: italic;
+    color: green;
+
+    margin-left: 5pt;
+}
+
+p {
+    text-align: justify;
+    font-weight: bold;
+
+    margin-left: 10pt;
+}
+
+ul {
+    font-weight: bold;
+
+    list-style-type: square;
+
+    margin-left: 15pt;
+}
+
+ol {
+    font-weight: bold;
+
+    list-style-type: upper-roman;
+
+    margin-left: 15pt;
+}

@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+
+    /** Etape 2 : on active le mode grille **/
+    /**
+    - a. il faut définir le conteneur de la grille. Ici c'est le body, mais ça pourrait être un autre élément (<div>, <main>, etc.)  
+    - b. on utilise display: grid; pour activer le mode grille    
+    **/
+    display: grid;
+
+    /** Etape 2  */
+    /**
+    - c : on définit la structure de la grille. Ici on crée une grille de 3 colonnes et 4 lignes
+    - d : on utilise grid-template-areas pour nommer les différentes zones de la grille
+    
+    **/
+    grid-template-areas:
+        "a a a"
+        "b b b"
+        "c c d"
+        "e e e";
+    /**
+    Ici on a nommé les zones de la grille ainsi :
+    - a : header
+    - b : nav
+    - c : main
+    - d : aside
+    - e : footer
+    */
+
+    /**
+    On ajoute un peu d'espace entre les éléments de la grille avec la propriété gap
+    */
+    gap: 1rem;
+
+}
+
+
+header {
+    /** Ici on nomme la zone de la grille associée à l'élément header. Nom de la zone : a **/
+    grid-area: a;
+}
+
+nav {
+    /** Ici on nomme la zone de la grille associée à l'élément nav. Nom de la zone : b **/
+    grid-area: b;
+}
+
+main {
+    /** Ici on nomme la zone de la grille associée à l'élément main. Nom de la zone : c **/
+    grid-area: c;
+}
+
+aside {
+    /** Ici on nomme la zone de la grille associée à l'élément aside. Nom de la zone : d **/
+    grid-area: d;
+}
+
+footer {
+    /** Ici on nomme la zone de la grille associée à l'élément footer. Nom de la zone : e **/
+    grid-area: e;
+}

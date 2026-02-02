@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Une première page HTML</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="A_style.css">
+
+</head>
+
+<body>
+
+    <main>
+
+        <div class="box">
+            Voici le contenu de la boite
+        </div>
+
+    </main>
+
+
+    <footer>
+
+        <fieldset>
+            <label>
+                <input type="radio" name="mode" id="mode1" checked onclick="functionApplyBoxSizingContentBox()">
+                Box model standard (par défaut) : <code>box-sizing : content-box;</code>
+
+                <p>
+                    Largeur totale de la boîte =
+                </p>
+                <ul>
+                    <li>largeur du contenu (<code>width</code>) + </li>
+                    <li>marge intérieure gauche + marge intérieure droite + </li>
+                    <li>bordure gauche + bordure droite + </li>
+                    <li>marge extérieure gauche + marge extérieure droite</li>
+                </ul>
+            </label>
+
+            <label>
+                <input type="radio" name="mode" id="mode2" onclick="functionApplyBoxSizingBorderBox()">
+                Box model alternatif : <code>box-sizing : border-box;</code>
+
+                <p>
+                    Largeur totale de la boîte = largeur totale de la boîte (<code>width</code>), incluant :
+                </p>
+                <ul>
+                    <li>
+                        largeur du contenu +
+                    </li>
+                    <li>marge intérieure gauche + marge intérieure droite + </li>
+                    <li>bordure gauche + bordure droite</li>
+                </ul>
+        </fieldset>
+
+
+    </footer>
+</body>
+
+<script>
+
+    const box = document.querySelector('.box');
+    const mode1 = document.getElementById('mode1');
+    const mode2 = document.getElementById('mode2');
+
+    functionApplyBoxSizingBorderBox = () => {
+        if (mode2.checked) {
+            box.style.boxSizing = 'border-box';
+        }
+    }
+
+    functionApplyBoxSizingContentBox = () => {
+        if (mode1.checked) {
+            box.style.boxSizing = 'content-box';
+        }
+    }
+
+</script>
+
+</html>

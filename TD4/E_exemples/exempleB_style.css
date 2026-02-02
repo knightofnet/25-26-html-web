@@ -1,0 +1,70 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: lightpink;
+}
+
+h1 {
+    color: blue;
+}
+
+h2 {
+    color: darkblue;
+}
+
+
+#joueur {
+
+    display: grid;
+    grid-template-areas:
+        "p p"
+        "f t"
+        "pf pf"
+        "b b"
+    ;
+
+    border: 1px solid yellow;
+    padding: 1px;
+    gap: 1px;
+
+
+}
+
+/*
+ Les sélecteurs `#joueur > div` et `#joueur > p` ciblent uniquement
+ les enfants directs `div` et `p` de l'élément #joueur. Ici on leur
+ applique une bordure pour visualiser chaque case. 
+*/
+#joueur>div,
+#joueur>p {
+    border: 1px solid yellow;
+}
+
+.pseudo {
+    /* `grid-area` associe cet élément à la zone nommée "p" définie
+    par `grid-template-areas`. Cela positionne automatiquement
+    l'élément à l'emplacement voulu dans la grille. */
+    grid-area: p;
+
+}
+
+.frequence {
+    grid-area: f;
+}
+
+.typesJeux {
+    grid-area: t;
+}
+
+.plateforme {
+    grid-area: pf;
+}
+
+.envoi {
+    grid-area: b;
+
+    margin: 0;
+    padding: 1rem 0;
+}

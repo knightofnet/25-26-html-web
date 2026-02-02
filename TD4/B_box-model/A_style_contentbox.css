@@ -1,0 +1,60 @@
+/**
+Box-model CSS :
+    Visualisation des différentes parties du modèle de boîte CSS
+    ici, box-sizing a pour valeur content-box (valeur par défaut) 
+        ==> La largeur et la hauteur spécifiées concernent uniquement la zone de contenu
+
+**/
+
+body {
+    background-color: #e4e4e4;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main {
+    margin: 10px;
+    border: 2px dotted black;
+    width: fit-content;
+
+    background-color: beige;
+}
+
+.box {
+
+    background-color: lightblue;
+
+    /* Largeur de la zone de contenu */
+    width: 300px;
+
+    /* Marge intérieure : Espace entre le contenu et la bordure */
+    padding-top: 30px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+
+    /* Bordure de la boîte */
+    border: 5px solid red;
+
+    /* Marge extérieure : Espace entre la bordure et les autres éléments */
+    margin-top: 10px;
+    margin-right: 50px;
+    margin-bottom: 60px;
+    margin-left: 100px;
+
+    /**
+    Largeur totale de la boîte = 
+        largeur du contenu + 
+        marge intérieure gauche + marge intérieure droite + 
+        bordure gauche + bordure droite + 
+        marge extérieure gauche + marge extérieure droite
+    
+    Hauteur totale de la boîte = 
+        hauteur du contenu + 
+        marge intérieure haut + marge intérieure bas + 
+        bordure haut + bordure bas + 
+        marge extérieure haut + marge extérieure bas
+    
+     **/
+
+
+}

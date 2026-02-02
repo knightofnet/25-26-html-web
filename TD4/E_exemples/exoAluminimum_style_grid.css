@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+}
+
+.main-container {
+    /** Activer le mode grille **/
+    display: grid;
+
+    /** Définir les zones de la grille :
+        - la zone "a" occupe les deux colonnes de la première ligne.
+        - la zone "b" occupe la première colonne de la deuxième ligne.
+        - la zone "c" occupe la deuxième colonne de la deuxième ligne.
+    **/
+    grid-template-areas:
+        "a a"
+        "b c"
+    ;
+
+    /** Définir deux colonnes de largeur égale **/
+    grid-template-columns: 1fr 1fr;
+
+    /** Espacement entre les éléments de la grille **/
+    gap: 20px;
+
+}
+
+header {
+    grid-area: a;
+}
+
+#proprietes {
+    grid-area: b;
+}
+
+#production {
+    grid-area: c;
+}

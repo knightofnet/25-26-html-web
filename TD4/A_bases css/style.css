@@ -1,0 +1,14 @@
+/* Étape 01 : juste pour voir que le CSS “marche” */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+}
+
+header {
+    background: #f3f3f3;
+    padding: 16px;
+}
+
+nav a {
+    margin-right: 12px;
+}
