@@ -1,0 +1,82 @@
+body {
+    background-color: #303030;
+    color: lightgray;
+
+    /** On utilise une grille CSS pour agencer la page **/
+    display: grid;
+
+    /** Définition des lignes et colonnes de la grille **/
+    grid-template-areas:
+        "barreDuHaut barreDuHaut barreDuHaut"
+        "barreGauche contenu barreDroite"
+        "piedDePage piedDePage piedDePage"
+    ;
+
+    /** Espacement entre les éléments de la grille **/
+    gap: 10px;
+
+    /** Famille de polices et alignement du texte **/
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+
+}
+
+.first-level {
+    background-color: #666666;
+    border: 2px solid black;
+
+    /** Ajout d'angles arrondis **/
+    border-radius: 5px;
+}
+
+/**
+Le sélecteur ci-dessous cible la balise <header> qui a comme classe "first-level"
+*/
+header.first-level {
+    grid-area: barreDuHaut;
+}
+
+nav.first-level {
+    grid-area: barreGauche;
+}
+
+section.first-level {
+    grid-area: contenu;
+}
+
+
+/**
+  Styles pour les éléments internes à la section.
+  
+  On peut cumuler les sélecteurs pour appliquer les mêmes styles à plusieurs éléments. On les sépare par des virgules. Pour chaque sélecteur, on précise qu'on cible les éléments enfants directs (>) de la section qui a comme classe "first-level".
+
+*/
+section.first-level>header,
+section.first-level>article,
+section.first-level>footer {
+
+    color: white;
+    background-color: #9b9b9b;
+
+    /** Ajout d'angles arrondis **/
+    border-radius: 5px;
+
+    /** Marges extérieures et centrage horizontal **/
+    margin: auto 1em;
+
+}
+
+section.first-level>article {
+    height: 5em;
+
+}
+
+aside.first-level {
+    grid-area: barreDroite;
+
+}
+
+footer.first-level {
+    grid-area: piedDePage;
+
+}
