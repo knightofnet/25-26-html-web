@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>Root Me</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+    <h1>Root Me</h1>
+
+    <img src="rootme.png" alt="Logo Root Me">
+
+    <h2>Qu’est-ce que Root Me ?</h2>
+
+    <p>Root Me, association à but non lucratif créée en mai 2011 à Coublevie, en Isère, a pour objet de promouvoir la
+        diffusion libre du savoir relatif au hacking et à la sécurité de l’information. Se savoir est essentiel, compte
+        tenu de la <a href="page1.html">pénurie de talents en cybersécurité Root</a>, littéralement « racine » en anglais, désigne le nom de
+        l’utilisateur d’un système informatique qui possède toutes les permissions. Et c’est tout l’objet des «
+        challenges » proposés par Root Me sur sa plateforme. Ces challenges ou défis consistent à trouver un « flag » ou
+        un « mot de passe de validation », prouvant que la personne a bien réussi le hack. </p>
+
+
+    <h2>Quelques chiffres ?</h2>
+
+    <table>
+        <tr>
+            <th colspan="2">Root Me : les chiffres </th>
+        </tr>
+
+        <tr>
+            <td>Âge</td>
+            <td>13 ans, déja!</td>
+        </tr>
+        <tr>
+            <td>Challenges</td>
+            <td>558</td>
+        </tr>
+        <tr>
+            <td>Solutions</td>
+            <td>5647</td>
+        </tr>
+        <tr>
+            <td>Environnements virtuels</td>
+            <td>172</td>
+        </tr>
+    </table>
+
+
+    <h2>Rejoignez-nous...</h2>
+
+    <form action="ficvide.php" method="post">
+        <fieldset>
+            
+            <div>
+                <label for="iEmail">Email :</label>
+                <input type="email" id="iEmail" name="email" required>
+            </div>
+
+            <div>
+                <label for="iPassword">Mot de passe :</label>
+                <input type="password" id="iPassword" name="password" minlength="10" maxlength="30" pattern="[0-9][a-z]{2}[A-Za-z0-9\-+#$]+" required>
+            </div>
+
+            <p>
+                Format: au moins 10 caractères, au plus 30 caractères, commençant par: 1 chiffre puis 2 caractères
+                minuscules, puis caractères non accentués, chiffres et -+#$:
+            </p>
+
+            <div>
+                <label for="iUserCategory">Catégorie d'utilisateur</label>
+                <select id="iUserCategory" name="userCategory">
+                    <option value="cybersecurity">Professionnel de la cybersécurité</option>
+                    <option value="it">Professionnel de l'informatique</option>
+                    <option value="teacher">Enseignant</option>
+                    <option value="student">Etudiant</option>
+                </select>
+            </div>
+
+            <div>
+                Centres d'intérêts en cybersécurité :<br>
+                <input type="radio" id="iHacking" name="interests" value="hacking"><label
+                    for="iHacking">Hacking</label><br>
+                <input type="radio" id="iSocialEngineering" name="interests" value="socialEngineering"><label
+                    for="iSocialEngineering">Ingénierie sociale</label><br>
+                <input type="radio" id="iDataPrivacy" name="interests" value="dataPrivacy"><label
+                    for="iDataPrivacy">Confidentialité des données</label><br>
+                <input type="radio" id="iSoftwareSecurity" name="interests" value="softwareSecurity"><label
+                    for="iSoftwareSecurity">Sécurité logicielle</label><br>
+                <input type="radio" id="iNetworkSecurity" name="interests" value="networkSecurity"><label
+                    for="iNetworkSecurity">Sécurité réseau</label><br>
+            </div>
+
+            <div>
+                <button type="submit">
+                    Valider
+                </button>
+            </div>
+
+        </fieldset>
+
+    </form>
+
+    Sources: Root Me
+
+
+</body>
+
+</html>
