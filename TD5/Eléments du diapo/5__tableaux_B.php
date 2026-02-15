@@ -1,0 +1,7 @@
+<?php
+$agesParPrenoms = [
+    "Alice" => 30,
+    "Bob" => 25,
+    "Charlie" => 35
+];
+?>
