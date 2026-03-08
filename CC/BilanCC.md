@@ -1,23 +1,33 @@
-# Bilan de la correction des fichiers rendus
+# Bilan de la correction du contrôle continu HTML/CSS
 
-<!-- TOC tocDepth:2..3 chapterDepth:2..6 -->
+<!-- TOC tocDepth:2..5 chapterDepth:2..6 -->
 
 - [1. Le HTML](#1-le-html)
   - [1.1. Dans le détail](#11-dans-le-détail)
+    - [1.1.1. Le logo du site](#111-le-logo-du-site)
+    - [1.1.2. Les 4 liens de navigation](#112-les-4-liens-de-navigation)
   - [1.2. Le formulaire d'évaluation du livre](#12-le-formulaire-dévaluation-du-livre)
+    - [1.2.1. Formulaire en HTML](#121-formulaire-en-html)
+    - [1.2.2. Les éléments du formulaire d'évaluation du livre](#122-les-éléments-du-formulaire-dévaluation-du-livre)
+    - [1.2.3. Le formulaire au final](#123-le-formulaire-au-final)
   - [1.3. Les titres](#13-les-titres)
   - [1.4. En vrac](#14-en-vrac)
+    - [1.4.1. La sous-partie de la note](#141-la-sous-partie-de-la-note)
+    - [1.4.2. Le prix avec la partie décimale en exposant](#142-le-prix-avec-la-partie-décimale-en-exposant)
+    - [1.4.3. Les balises HTML dans la description](#143-les-balises-html-dans-la-description)
 - [2. Le CSS](#2-le-css)
-- [3. Rappels sur le CSS](#3-rappels-sur-le-css)
-  - [3.1. Sélecteurs de base](#31-sélecteurs-de-base)
-  - [3.2. Pseudo-classes](#32-pseudo-classes)
-- [4. Les bordures en CSS](#4-les-bordures-en-css)
-- [5. Quelques propriétés CSS utiles pour le rendu attendu](#5-quelques-propriétés-css-utiles-pour-le-rendu-attendu)
-- [6. La grille CSS du sujet](#6-la-grille-css-du-sujet)
-  - [6.1. Définir la grille dans le HTML](#61-définir-la-grille-dans-le-html)
-  - [6.2. Définir la grille dans le CSS](#62-définir-la-grille-dans-le-css)
-  - [6.3. Quelques erreurs fréquentes dans la réalisation de la grille CSS](#63-quelques-erreurs-fréquentes-dans-la-réalisation-de-la-grille-css)
-- [7. Correction du sujet](#7-correction-du-sujet)
+  - [2.1. Rappels sur le CSS](#21-rappels-sur-le-css)
+    - [2.1.1. Sélecteurs de base](#211-sélecteurs-de-base)
+    - [2.1.2. Pseudo-classes](#212-pseudo-classes)
+  - [2.2. Les bordures en CSS](#22-les-bordures-en-css)
+  - [2.3. Quelques propriétés CSS utiles pour le rendu attendu](#23-quelques-propriétés-css-utiles-pour-le-rendu-attendu)
+  - [2.4. La grille CSS du sujet](#24-la-grille-css-du-sujet)
+    - [2.4.1. Définir la grille dans le HTML](#241-définir-la-grille-dans-le-html)
+    - [2.4.2. Définir la grille dans le CSS](#242-définir-la-grille-dans-le-css)
+    - [2.4.3. Pour le conteneur de la grille](#243-pour-le-conteneur-de-la-grille)
+    - [2.4.4. Pour les éléments de la grille](#244-pour-les-éléments-de-la-grille)
+    - [2.4.5. Quelques erreurs fréquentes dans la réalisation de la grille CSS](#245-quelques-erreurs-fréquentes-dans-la-réalisation-de-la-grille-css)
+- [3. Correction du sujet](#3-correction-du-sujet)
 
 <!-- /TOC -->
 
@@ -364,7 +374,7 @@ Autre particularité, le prix étaient indiqué en deux parties : la partie enti
 </p>
 ```
 
-#### 1.4.3. Les balises &lt;div&gt; et &lt;span&gt; dans la description
+#### 1.4.3. Les balises HTML dans la description
 
 Dans la description du livre se trouvaient deux balises HTML qui étaient observable sur la capture d'écran : une balise `<div>` et une balise `<span>`.
 
@@ -398,7 +408,7 @@ Afin de relier la feuille de style CSS à la page HTML, il fallait utiliser la b
 </head>
 ```
 
-## 3. Rappels sur le CSS
+### 2.1. Rappels sur le CSS
 
 Un fichier CSS est composé de **règles de style**. Chaque règle de style est constituée d'un **sélecteur** et d'un **bloc de déclaration**. Le sélecteur indique à quel élément HTML la règle de style s'applique, tandis que le bloc de déclaration contient une ou plusieurs déclarations de style qui définissent les propriétés CSS à appliquer à cet élément. *Par exemple, la règle de style suivante :*
 
@@ -413,7 +423,7 @@ Applique les styles définis dans le bloc de déclaration (couleur rouge et tail
 
 Il s'agit d'une règle de style très simple, qui utilise un **sélecteur de base** (ou sélecteur de type), qui cible tous les éléments `<p>` du document. Cependant, il existe de nombreux autres types de sélecteurs en CSS, tels que les sélecteurs de classe, les sélecteurs d'identifiant, les sélecteurs d'attribut, etc., qui permettent de cibler des éléments HTML de manière plus précise et spécifique.
 
-### 3.1. Sélecteurs de base
+#### 2.1.1. Sélecteurs de base
 
 - **Sélecteur de type** : cible tous les éléments d'un type spécifique. *Par exemple, `p` cible tous les éléments `<p>`*.
 - **Sélecteur de classe** : cible tous les éléments qui ont une classe spécifique. *Par exemple, `.highlight` cible tous les éléments qui ont la classe "highlight"*.
@@ -450,7 +460,7 @@ Il s'agit d'une règle de style très simple, qui utilise un **sélecteur de bas
 
 - **Sélecteur de groupe** : cible plusieurs éléments en même temps. *Par exemple, `h1, h2, h3` cible tous les éléments `<h1>`, `<h2>` et `<h3>`*.
 
-### 3.2. Pseudo-classes
+#### 2.1.2. Pseudo-classes
 
 Dans les instructions du contrôle continu, il était demandé d'ajouter des styles pour les liens hypertexte, afin qu'ils changent de couleur lorsqu'on passe la souris dessus. En CSS, on utilise les pseudo-classes pour définir des styles qui s'appliquent à un élément dans un état particulier. Par exemple, la pseudo-classe `:hover` s'applique à un élément lorsque l'utilisateur passe la souris dessus (`hover` pour survol en anglais).
 
@@ -469,7 +479,7 @@ a:hover {
 }
 ```
 
-## 4. Les bordures en CSS
+### 2.2. Les bordures en CSS
 
 Pour certains éléments, il était demandé d'ajouter une bordure. En CSS, on utilise la propriété `border` pour ajouter une bordure à un élément. La propriété `border` est une propriété raccourcie qui permet de définir la largeur, le style et la couleur de la bordure en une seule déclaration.
 
@@ -515,7 +525,7 @@ Si on regarde le style de bordure du titre de niveau, il est donc en partie déf
 
 Il est tout à fait possible d'écrire dans une règle - plus générale - la plupart des propriétés communes à plusieurs éléments, et d'écrire dans des règles plus spécifiques les propriétés qui diffèrent entre ces éléments. C'est une bonne pratique pour éviter les redondances dans le code CSS et pour faciliter la maintenance du code.
 
-## 5. Quelques propriétés CSS utiles pour le rendu attendu
+### 2.3. Quelques propriétés CSS utiles pour le rendu attendu
 
 **Retirer le soulignement des liens :**
 
@@ -541,7 +551,7 @@ p {
 }
 ```
 
-## 6. La grille CSS du sujet
+### 2.4. La grille CSS du sujet
 
 Pour réaliser la mise en page de la page web, il fallait utiliser une grille CSS. C'était indiqué dans les instructions et visible sur la capture d'écran du rendu attendu : la page était organisée en trois colonnes, avec une colonne centrale plus large que les deux colonnes latérales. Il y avait une partie supérieure qui s'étendait sur toute la largeur de la page, et une partie inférieure qui s'étendait également sur toute la largeur de la page.
 
@@ -549,7 +559,7 @@ Cette organisation correspond à une grille CSS avec 3 colonnes et 3 lignes, où
 
 ![Grille attendue](bilanCC_ress/grid.png)
 
-### 6.1. Définir la grille dans le HTML
+#### 2.4.1. Définir la grille dans le HTML
 
 Pour réaliser une grille CSS, il faut un ensemble d'éléments HTML.
 
@@ -629,9 +639,9 @@ Pour réaliser une grille CSS, il faut un ensemble d'éléments HTML.
   </main>
   ```
   
-### 6.2. Définir la grille dans le CSS
+#### 2.4.2. Définir la grille dans le CSS
 
-#### 6.2.1. Pour le conteneur de la grille
+#### 2.4.3. Pour le conteneur de la grille
 
 Maintenant que la grille est définie dans le HTML, il faut la définir dans le CSS. On commence par ajouter des propriétés au conteneur de la grille :
 
@@ -654,7 +664,7 @@ main {
 }
 ```
 
-#### 6.2.2. Pour les éléments de la grille
+#### 2.4.4. Pour les éléments de la grille
 
 Ensuite, il faut ajouter des propriétés aux éléments de la grille pour les placer dans les zones définies dans le conteneur de la grille. Pour cela, on utilise la propriété `grid-area` en indiquant le nom de la zone à laquelle l'élément doit être associé.
 
@@ -680,7 +690,7 @@ footer {
 }
 ```
 
-### 6.3. Quelques erreurs fréquentes dans la réalisation de la grille CSS
+#### 2.4.5. Quelques erreurs fréquentes dans la réalisation de la grille CSS
 
 - Oublier d'ajouter la propriété `display: grid` au conteneur de la grille, ce qui fait que les propriétés de grille ne sont pas appliquées et que les éléments ne sont pas organisés en grille.
 - Oublier de définir les zones de la grille avec la propriété `grid-template-areas`, ce qui rend plus difficile le placement des éléments dans la grille.
@@ -700,7 +710,7 @@ footer {
 - Oublier d'ajouter la propriété `gap` pour définir l'espacement entre les éléments de la grille, ce qui peut rendre la mise en page plus serrée et moins lisible.
 - Oublier de définir la taille des colonnes avec la propriété `grid-template-columns`, ce qui peut faire que les colonnes ne sont pas de la bonne taille et que la mise en page ne correspond pas à la capture d'écran attendue.
 
-## 7. Correction du sujet
+## 3. Correction du sujet
 
 La méthode de correction que j'ai utilisée pour corriger ce sujet est la suivante :
 
