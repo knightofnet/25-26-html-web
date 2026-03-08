@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>Athalante - Site de commerce</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main>
+
+        <header>
+
+            <img src="logo_athalante.png" alt="Logo d'Athalante - Site de commerce">
+            <nav>
+                <a href="page.html">Accueil</a>
+                <a href="http://site.athalante.fr/produits">Produits</a>
+                <a href="mailto:contact@athalante.fr">Contact</a>
+                <a href="http://univ-tours.fr">À propos</a>
+            </nav>
+
+        </header>
+
+        <aside class="zone-achat">
+
+            <p id="p-rating">
+                4,5 <img src="4.5_stars.png" alt="Note de 4,5 étoiles"> <span>(49 avis)</span>
+            </p>
+
+            <p class="price">
+                19<sup>99 €</sup>
+            </p>
+
+            <p>
+                Le prix inclut la TVA. Les frais de livraison et d'expédition sont calculés lors du passage à la caisse.
+            </p>
+
+
+            <p class="bold">En stock</p>
+
+            <button>Ajouter au panier</button>
+
+
+            <h3>Infos sur l'expédition :</h3>
+            <ul>
+                <li>Livraison standard : 3-5 jours ouvrables</li>
+                <li>Livraison express : 1-2 jours ouvrables</li>
+                <li>Livraison gratuite pour les commandes de plus de 50€</li>
+            </ul>
+
+            <section class="product-evaluation">
+                <h2>Votre avis sur ce livre</h2>
+
+                <form method="post" action="ficVide.php">
+                    <fieldset>
+
+                        <div>
+                            <label for="rating">Votre note :</label>
+                            <select id="rating" name="rating" required>
+                                <option value="">--Choisissez une note--</option>
+                                <option value="1">1 étoile</option>
+                                <option value="2">2 étoiles</option>
+                                <option value="3">3 étoiles</option>
+                                <option value="4">4 étoiles</option>
+                                <option value="5">5 étoiles</option>
+                            </select>
+                        </div>
+
+
+                        <div>
+                            <label for="comment">Votre commentaire :</label>
+                            <br>
+                            <textarea id="comment" name="comment" rows="4" cols="50"
+                                placeholder="Écrivez votre commentaire ici..." required></textarea>
+                        </div>
+
+                        <div>
+                            <label for="email">Votre adresse email :</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div>
+                            <label for="verifInput">Vérification anti-robots :</label>
+                            <input type="text" id="verifInput" name="verifInput" required
+                                placeholder="Combien font 4 + 5 ? Réponse au format 000,00" pattern="[\d]{1,3},[\d]{2}">
+                            <p>Veuillez entrer le résultat de l'addition : 4 + 5 = ? avec deux chiffres après la virgule
+                            </p>
+                        </div>
+
+                        <div>
+                            <button type="submit">Envoyer</button>
+                        </div>
+
+
+                    </fieldset>
+                </form>
+
+
+            </section>
+
+        </aside>
+
+
+
+
+
+        <article class="product-main">
+            <article>
+                <h1>Livre - Apprendre le CSS de A à Z</h1>
+
+
+                <p class="price">
+                    19<sup>99 €</sup>
+                </p>
+
+                <p class="text-justify">
+
+                    Le CSS permet de styliser et de mettre en forme les pages web. Avec ce livre, vous apprendrez à
+                    maîtriser les bases du CSS, à créer des mises en page attrayantes et à rendre vos sites web plus
+                    professionnels. Que ce soit pour personnaliser votre blog, créer un portfolio en ligne ou développer
+                    des sites web interactifs, ce livre vous fournira les compétences nécessaires pour réussir. Ciblez
+                    vos balises HTML &lt;div&gt; et &lt;span&gt; pour une mise en forme précise et efficace.
+
+                    Etudiants de L1 Maths découvrez le CSS de manière ludique et efficace avec de vrais exercices de TD
+                    adaptés à votre niveau.
+                </p>
+                <p>
+                    Découvrir les chapitres du livre :
+                </p>
+                <ol>
+                    <li>Les sélecteurs CSS : Cibler les éléments HTML</li>
+                    <li>La cascade et l'héritage : Comprendre la priorité des styles</li>
+                    <li>Le modèle de boîte CSS : Gérer les marges, les bordures et les paddings</li>
+                    <li>Les mises en page CSS : Flexbox et Grid</li>
+                    <li>Le responsive design : Adapter votre site à tous les écrans</li>
+                </ol>
+
+
+            </article>
+
+            <section class="product-details">
+                <h2>Détails sur le produit</h2>
+
+                <table>
+                    <tr>
+                        <th scope="row">ASIN</th>
+                        <td>L1-MATHS-GR1A</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Auteur</th>
+                        <td>Arnaud Leblanc</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Financé par</th>
+                        <td rowspan="2">Université de Tours - Faculté des Sciences</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Collection</th>
+
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Date de publication</th>
+                        <td>11 février 2026</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Langue</th>
+                        <td>Français</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Nombre de pages</th>
+                        <td>275</td>
+                    </tr>
+
+
+                </table>
+            </section>
+
+
+
+
+        </article>
+
+
+        <div class="product-images">
+
+
+            <div>
+                <img src="livre_css_large.png" alt="Couverture du livre 'Apprendre le CSS de A à Z'">
+            </div>
+            <div>
+                <img src="livre_css_small.png" alt="Couverture du livre 'Apprendre le CSS de A à Z'">
+            </div>
+            <div>
+                <img src="livre_css_4eme.png" alt="Quatrième de couverture du livre 'Apprendre le CSS de A à Z'">
+            </div>
+
+        </div>
+
+
+
+        <footer>
+            <p>&copy; 2026 TP Noté - L1-Math Groupe 1A - Université de Tours</p>
+        </footer>
+
+
+
+    </main>
+
+
+
+</body>
+
+</html>

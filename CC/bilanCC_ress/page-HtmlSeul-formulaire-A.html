@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>Travail sur le formulaire</title>
+    <meta charset="utf-8">
+    <!-- Cette balise permet d'assurer que la page s'affiche correctement sur tous les appareils -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+    <form action="submit_form.php" method="post">
+        <fieldset>
+
+
+            <label for="note">Votre note :</label>
+            <select id="note" name="note" required>
+                <option value="" selected>--Choisissez une note--</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+
+            <label for="comment">Votre commentaire :</label>
+            <textarea id="comment" name="comment" rows="4" placeholder="Écrivez votre commentaire ici..."
+                required></textarea>
+
+            <label for="email">Votre adresse email :</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="captcha">Vérification anti-robots :</label>
+            <input type="text" id="captcha" name="captcha" placeholder="Combien font 3 + 4 ? Réponse au format 000,00"
+                pattern="[\d]{1,3},[\d]{2}" required>
+
+            <button type="submit">Envoyer</button>
+        </fieldset>
+    </form>
+
+</body>
+
+</html>

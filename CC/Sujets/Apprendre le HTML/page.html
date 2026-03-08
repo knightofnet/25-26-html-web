@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>Athalante - Site de commerce</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main>
+
+        <header>
+
+            <img src="logo_athalante.png" alt="Logo d'Athalante - Site de commerce">
+            <nav>
+                <a href="page.html">Accueil</a>
+                <a href="http://site.athalante.fr/produits">Produits</a>
+                <a href="mailto:contact@athalante.fr">Contact</a>
+                <a href="http://univ-tours.fr">À propos</a>
+            </nav>
+
+        </header>
+
+
+        <div class="product-images">
+
+            <div>
+                <img src="livre_html_large.jpg" alt="Couverture du livre 'Apprendre le HTML à la fac'">
+            </div>
+            <div>
+                <img src="livre_html_small.jpg" alt="Couverture du livre 'Apprendre le HTML à la fac'">
+            </div>
+            <div>
+                <img src="livre_html_4eme.png" alt="Quatrième de couverture du livre 'Apprendre le HTML à la fac'">
+            </div>
+
+        </div>
+
+        <article class="product-main">
+            <article>
+                <h1>Livre - Apprendre le HTML à la fac</h1>
+
+                <p id="p-rating">
+                    4,5 <img src="4.5_stars.png" alt="Note de 4,5 étoiles"> <span>(23 avis)</span>
+                </p>
+
+                <p class="price">
+                    29<sup>99 €</sup>
+                </p>
+
+                <p class="text-justify">
+                    Le livre indispensable pour apprendre le HTML en s'amusant ! Avec des exemples concrets et des
+                    exercices
+                    pratiques, ce livre vous guidera pas à pas dans la maîtrise du langage HTML. Que vous soyez débutant
+                    avec mes balises telles que &lt;html&gt; et &lt;div&gt;, ou que vous souhaitiez approfondir vos
+                    connaissances, ce livre est fait pour vous.
+                    Etudiants de L1 Maths découvrez le HTML de manière ludique et efficace avec de vrais exercices de TD
+                    adaptés à votre niveau.
+                </p>
+                <p>
+                    Découvrir les chapitres du livre :
+                </p>
+                <ol>
+                    <li>Introduction au HTML</li>
+                    <li>Les bases des balises HTML</li>
+                    <li>Structurer une page web</li>
+                    <li>Les formulaires et interactions</li>
+                    <li>CSS et mise en forme</li>
+                    <li>Projet final : création d'un site web</li>
+                </ol>
+
+
+            </article>
+
+            <section class="product-details">
+                <h2>Détails sur le produit</h2>
+
+                <table>
+                    <tr>
+                        <th scope="row">ASIN</th>
+                        <td>L1-MATHS-GR1</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Financé par</th>
+                        <td rowspan="2">Université de Tours - Faculté des Sciences</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Éditeur</th>
+
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Date de publication</th>
+                        <td>16 février 2026</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Langue</th>
+                        <td>Français</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Nombre de pages</th>
+                        <td>250</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Auteur</th>
+                        <td>Arnaud Leblanc</td>
+                    </tr>
+
+                </table>
+            </section>
+
+            <section class="product-evaluation">
+                <h2>Evaluez le livre</h2>
+
+                <form method="post" action="ficVide.php">
+                    <fieldset>
+
+                        <div>
+                            <label for="rating">Votre note :</label>
+                            <select id="rating" name="rating" required>
+                                <option value="">--Choisissez une note--</option>
+                                <option value="1">1 étoile</option>
+                                <option value="2">2 étoiles</option>
+                                <option value="3">3 étoiles</option>
+                                <option value="4">4 étoiles</option>
+                                <option value="5">5 étoiles</option>
+                            </select>
+                        </div>
+
+
+                        <div>
+                            <label for="comment">Votre commentaire :</label>
+                            <br>
+                            <textarea id="comment" name="comment" rows="4" cols="50"
+                                placeholder="Écrivez votre commentaire ici..." required></textarea>
+                        </div>
+
+                        <div>
+                            <label for="email">Votre adresse email :</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div>
+                            <label for="verifInput">Vérification anti-robots :</label>
+                            <input type="text" id="verifInput" name="verifInput" required
+                                placeholder="Combien font 3 + 4 ? Réponse au format 000,00" pattern="[\d]{1,3},[\d]{2}">
+                            <p>Veuillez entrer le résultat de l'addition : 3 + 4 = ? avec deux chiffres après la virgule
+                            </p>
+                        </div>
+
+                        <div>
+                            <button type="submit">Envoyer</button>
+                        </div>
+
+
+                    </fieldset>
+                </form>
+
+
+            </section>
+        </article>
+
+        <aside class="zone-achat">
+
+
+            <p class="price">
+                29<sup>99 €</sup>
+            </p>
+
+            <p>
+                Le prix inclut la TVA. Les frais de livraison et d'expédition sont calculés lors du passage à la caisse.
+            </p>
+
+
+            <p class="bold">En stock</p>
+
+            <button>Ajouter au panier</button>
+
+
+            <h3>Infos sur l'expédition :</h3>
+            <ul>
+                <li>Livraison standard : 3-5 jours ouvrables</li>
+                <li>Livraison express : 1-2 jours ouvrables</li>
+                <li>Livraison gratuite pour les commandes de plus de 50€</li>
+            </ul>
+
+        </aside>
+
+
+        <footer>
+            <p>&copy; 2026 TP Noté - L1-Math Groupe 1B - Université de Tours</p>
+        </footer>
+
+
+    </main>
+
+    
+</body>
+
+</html>
