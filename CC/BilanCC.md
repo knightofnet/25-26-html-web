@@ -1,8 +1,29 @@
 # Bilan de la correction des fichiers rendus
 
+<!-- TOC tocDepth:2..3 chapterDepth:2..6 -->
+
+- [1. Le HTML](#1-le-html)
+  - [1.1. Dans le détail](#11-dans-le-détail)
+  - [1.2. Le formulaire d'évaluation du livre](#12-le-formulaire-dévaluation-du-livre)
+  - [1.3. Les titres](#13-les-titres)
+  - [1.4. En vrac](#14-en-vrac)
+- [2. Le CSS](#2-le-css)
+- [3. Rappels sur le CSS](#3-rappels-sur-le-css)
+  - [3.1. Sélecteurs de base](#31-sélecteurs-de-base)
+  - [3.2. Pseudo-classes](#32-pseudo-classes)
+- [4. Les bordures en CSS](#4-les-bordures-en-css)
+- [5. Quelques propriétés CSS utiles pour le rendu attendu](#5-quelques-propriétés-css-utiles-pour-le-rendu-attendu)
+- [6. La grille CSS du sujet](#6-la-grille-css-du-sujet)
+  - [6.1. Définir la grille dans le HTML](#61-définir-la-grille-dans-le-html)
+  - [6.2. Définir la grille dans le CSS](#62-définir-la-grille-dans-le-css)
+  - [6.3. Quelques erreurs fréquentes dans la réalisation de la grille CSS](#63-quelques-erreurs-fréquentes-dans-la-réalisation-de-la-grille-css)
+- [7. Correction du sujet](#7-correction-du-sujet)
+
+<!-- /TOC -->
+
 Ce document présente un bilan de la correction des fichiers rendus par les étudiants pour le contrôle continu HTML/CSS, qui portait sur la réalisation d'une page web en HTML et CSS à partir de deux captures d'écran et d'instructions. Les exemples de code présentés dans ce document sont des extraits de la correction, et ne représentent pas nécessairement le code complet ou exact qui a été corrigé. De plus, ils représentent une solution possible parmi d'autres, et il est tout à fait possible que d'autres solutions soient également correctes, tant qu'elles respectent les instructions et le rendu attendu.
 
-## Le HTML
+## 1. Le HTML
 
 Pour commencer, vous disposiez d'une capture d'écran de la page web à réaliser, sans CSS : elle vous présentait donc uniquement la structure de la page, avec les éléments suivants :
 
@@ -14,9 +35,9 @@ Pour commencer, vous disposiez d'une capture d'écran de la page web à réalise
 
 Il fallait donc obtenir, dans un premier temps, une page HTML structurée de manière à ce que les éléments soient présents, et dans le même ordre que la capture d'écran. Cet ordre est important, car c'est sur lui ensuite qu'il fallait ajouter une feuille de style CSS pour obtenir le rendu final.
 
-### Dans le détail
+### 1.1. Dans le détail
 
-#### Le logo du site
+#### 1.1.1. Le logo du site
 
 Je reviens sur l'ajout d'une image en HTML, car c'est un point qui a pu poser problème :
 
@@ -40,7 +61,7 @@ Attention aux chemins absolus et relatifs : si le fichier `logo_athalante.png` s
 
 > Voir aussi [Retour sur le TD1](https://github.com/knightofnet/25-26-html-web/blob/main/TD2/Retour%20sur%20le%20TD1.md#images-et-chemins-relatifs)
 
-#### Les 4 liens de navigation
+#### 1.1.2. Les 4 liens de navigation
 
 En HTML, on crée un lien hypertexte à l'aide de la balise `<a>`, qui doit comporter au moins un attribut : `href`, qui indique la destination du lien. Le texte ou les éléments placés entre les balises d'ouverture et de fermeture de `<a>` sont cliquables et redirigent vers la destination spécifiée dans l'attribut `href`. Par exemple :
 
@@ -78,7 +99,7 @@ Quatre liens de navigation devaient être présents dans le haut de la page :
 <a href="#">À propos</a>
 ```
 
-### Le formulaire d'évaluation du livre
+### 1.2. Le formulaire d'évaluation du livre
 
 Une partie qui n'a pas été toujours très bien réalisée est le formulaire d'évaluation du livre, qui devait comporter les éléments suivants :
 
@@ -89,7 +110,7 @@ Une partie qui n'a pas été toujours très bien réalisée est le formulaire d'
   - Le champ de saisie doit indiquer à l'utilisateur ce qu'il doit saisir : "Combien font 3 + 4 ? Réponse au format 000,00".
   - ce champ de saisie porte une contrainte sous la forme d'une expression régulière. L’utilisateur doit saisir comme résultat un nombre avec une partie entière de 1 à 3 chiffres, suivie d'une virgule, suivie de deux chiffres. L'expression régulière à utiliser pour cette contrainte est la suivante : ``[\d]{1,3},[\d]{2}``.
 
-#### Formulaire en HTML
+#### 1.2.1. Formulaire en HTML
 
 Avant de commencer, il faut se rappeler qu'un formulaire en HTML est créé à l'aide de la balise `<form>`, qui peut contenir différents types d'éléments de formulaire tels que des champs de saisie, des listes déroulantes, des zones de texte, etc. Chaque élément de formulaire doit être correctement structuré et associé à une étiquette pour garantir une bonne accessibilité.
 
@@ -108,7 +129,7 @@ Si un de ces attributs n'est pas spécifié, le formulaire utilisera des valeurs
 </form>
 ```
 
-#### Les éléments du formulaire d'évaluation du livre
+#### 1.2.2. Les éléments du formulaire d'évaluation du livre
 
 En observant la capture d'écran, on pouvait voir que le formulaire d'évaluation du livre était structuré de la manière suivante :
 
@@ -170,7 +191,7 @@ En observant la capture d'écran, on pouvait voir que le formulaire d'évaluatio
 - Notez bien que tous les champs du formulaire étaient marqués comme `required`, ce qui signifie qu'ils devaient être remplis avant de pouvoir soumettre le formulaire.
 - Dans les exemples de code ci-dessus, les attributs `id` et `name` ont des valeurs qui dépendent de votre choix, mais il est important de les inclure pour que le formulaire soit fonctionnel - surtout `name` qui permet de traiter correctement les données lors de la soumission.
 
-#### Le formulaire au final
+#### 1.2.3. Le formulaire au final
 
 Dans le point précédent, nous avons vu comment créer les différents éléments du formulaire d'évaluation du livre.
 
@@ -306,7 +327,7 @@ Voici quelques erreurs fréquentes dans la réalisation de ce formulaire, notamm
 - L'oubli de l'attribut `required` pour les champs du formulaire, ce qui permettait de soumettre le formulaire sans remplir les champs obligatoires.
 - L'oubli de l'attribut `pattern` pour le champ de vérification anti-robots, ce qui permettait de soumettre des réponses au format incorrect.
 
-### Les titres
+### 1.3. Les titres
 
 Dans la page à réaliser, il y avait des titres à repérer. En HTML, on utilise les balises de titre `<h1>`, `<h2>`, `<h3>`, etc. pour structurer le contenu en titres et sous-titres. La balise `<h1>` est utilisée pour le titre principal de la page, tandis que les balises `<h2>`, `<h3>`, etc. sont utilisées pour les sous-titres et les titres de sections.
 
@@ -315,9 +336,9 @@ Comment savoir quels titres utiliser pour chaque élément de la page ? Il falla
 - Dans un premier temps, il faut chercher le plus grand titre de la page, qui est généralement le titre principal. Dans la capture d'écran, le titre principal était "Livre - Apprendre le HTML à la fac", qui devait donc être entouré de la balise `<h1>`. Il ne peut y avoir qu'un seul titre `<h1>` par page, car il représente le sujet principal de la page. Donc, forcément, les autres titres devaient être des titres de niveau inférieur.
 - On observe 3 autres titres sur la page : "Détails sur le produit", "Evaluez le livre" et "Infos sur l'expédition". Les deux premiers semblent être de même niveau, car ils sont présentés de manière similaire sur la capture d'écran, tandis que le troisième semble être un titre de niveau inférieur, car il est présenté de manière moins proéminente. On pouvait donc utiliser `<h2>` pour les titres "Détails sur le produit" et "Evaluez le livre", et `<h3>` pour le titre "Infos sur l'expédition".
 
-### En vrac
+### 1.4. En vrac
 
-#### La sous-partie de la note
+#### 1.4.1. La sous-partie de la note
 
 ![La sous-partie de la note](bilanCC_ress/page-HtmlSeul-note.png)
 
@@ -331,7 +352,7 @@ Avec la capture, vous pouviez observer une partie où la note du livre était af
 
 Le texte "4,5" représente la note du livre, l'image "4.5_stars.png" représente la note en étoiles, et le texte "(23 avis)" indique le nombre d'avis. Le tout est entouré d'une balise `<p>` pour indiquer qu'il s'agit d'un paragraphe de texte. Du fait que ces éléments soient placés sur la même ligne dans la capture d'écran, il fallait les placer dans la même balise de bloc (ici, une balise `<p>`), pour qu'ils apparaissent côte à côte.
 
-#### Le prix avec la partie décimale en exposant
+#### 1.4.2. Le prix avec la partie décimale en exposant
 
 ![Le prix avec la partie décimale en exposant](bilanCC_ress/page-HtmlSeul-prix.png)
 
@@ -343,7 +364,7 @@ Autre particularité, le prix étaient indiqué en deux parties : la partie enti
 </p>
 ```
 
-#### Les balises &lt;div&gt; et &lt;span&gt; dans la description
+#### 1.4.3. Les balises &lt;div&gt; et &lt;span&gt; dans la description
 
 Dans la description du livre se trouvaient deux balises HTML qui étaient observable sur la capture d'écran : une balise `<div>` et une balise `<span>`.
 
@@ -364,7 +385,7 @@ Pour qu'elles soient affichées comme du texte il fallait échapper les caractè
 </p>
 ```
 
-## Le CSS
+## 2. Le CSS
 
 Une fois le HTML de la page réalisé, il fallait ajouter une feuille de style CSS pour obtenir le rendu final qui correspondait à la seconde capture d'écran. Il fallait donc créer un second fichier, avec l'extension `.css`, et y ajouter les règles de style nécessaires pour faire correspondre le rendu de la page à la capture d'écran.
 
@@ -377,7 +398,7 @@ Afin de relier la feuille de style CSS à la page HTML, il fallait utiliser la b
 </head>
 ```
 
-## Rappels sur le CSS
+## 3. Rappels sur le CSS
 
 Un fichier CSS est composé de **règles de style**. Chaque règle de style est constituée d'un **sélecteur** et d'un **bloc de déclaration**. Le sélecteur indique à quel élément HTML la règle de style s'applique, tandis que le bloc de déclaration contient une ou plusieurs déclarations de style qui définissent les propriétés CSS à appliquer à cet élément. *Par exemple, la règle de style suivante :*
 
@@ -392,7 +413,7 @@ Applique les styles définis dans le bloc de déclaration (couleur rouge et tail
 
 Il s'agit d'une règle de style très simple, qui utilise un **sélecteur de base** (ou sélecteur de type), qui cible tous les éléments `<p>` du document. Cependant, il existe de nombreux autres types de sélecteurs en CSS, tels que les sélecteurs de classe, les sélecteurs d'identifiant, les sélecteurs d'attribut, etc., qui permettent de cibler des éléments HTML de manière plus précise et spécifique.
 
-### Sélecteurs de base
+### 3.1. Sélecteurs de base
 
 - **Sélecteur de type** : cible tous les éléments d'un type spécifique. *Par exemple, `p` cible tous les éléments `<p>`*.
 - **Sélecteur de classe** : cible tous les éléments qui ont une classe spécifique. *Par exemple, `.highlight` cible tous les éléments qui ont la classe "highlight"*.
@@ -429,7 +450,7 @@ Il s'agit d'une règle de style très simple, qui utilise un **sélecteur de bas
 
 - **Sélecteur de groupe** : cible plusieurs éléments en même temps. *Par exemple, `h1, h2, h3` cible tous les éléments `<h1>`, `<h2>` et `<h3>`*.
 
-### Pseudo-classes
+### 3.2. Pseudo-classes
 
 Dans les instructions du contrôle continu, il était demandé d'ajouter des styles pour les liens hypertexte, afin qu'ils changent de couleur lorsqu'on passe la souris dessus. En CSS, on utilise les pseudo-classes pour définir des styles qui s'appliquent à un élément dans un état particulier. Par exemple, la pseudo-classe `:hover` s'applique à un élément lorsque l'utilisateur passe la souris dessus (`hover` pour survol en anglais).
 
@@ -448,7 +469,7 @@ a:hover {
 }
 ```
 
-## Les bordures en CSS
+## 4. Les bordures en CSS
 
 Pour certains éléments, il était demandé d'ajouter une bordure. En CSS, on utilise la propriété `border` pour ajouter une bordure à un élément. La propriété `border` est une propriété raccourcie qui permet de définir la largeur, le style et la couleur de la bordure en une seule déclaration.
 
@@ -494,7 +515,7 @@ Si on regarde le style de bordure du titre de niveau, il est donc en partie déf
 
 Il est tout à fait possible d'écrire dans une règle - plus générale - la plupart des propriétés communes à plusieurs éléments, et d'écrire dans des règles plus spécifiques les propriétés qui diffèrent entre ces éléments. C'est une bonne pratique pour éviter les redondances dans le code CSS et pour faciliter la maintenance du code.
 
-## Quelques propriétés CSS utiles pour le rendu attendu
+## 5. Quelques propriétés CSS utiles pour le rendu attendu
 
 **Retirer le soulignement des liens :**
 
@@ -520,7 +541,7 @@ p {
 }
 ```
 
-## La grille CSS du sujet
+## 6. La grille CSS du sujet
 
 Pour réaliser la mise en page de la page web, il fallait utiliser une grille CSS. C'était indiqué dans les instructions et visible sur la capture d'écran du rendu attendu : la page était organisée en trois colonnes, avec une colonne centrale plus large que les deux colonnes latérales. Il y avait une partie supérieure qui s'étendait sur toute la largeur de la page, et une partie inférieure qui s'étendait également sur toute la largeur de la page.
 
@@ -528,7 +549,7 @@ Cette organisation correspond à une grille CSS avec 3 colonnes et 3 lignes, où
 
 ![Grille attendue](bilanCC_ress/grid.png)
 
-### Définir la grille dans le HTML
+### 6.1. Définir la grille dans le HTML
 
 Pour réaliser une grille CSS, il faut un ensemble d'éléments HTML.
 
@@ -608,9 +629,9 @@ Pour réaliser une grille CSS, il faut un ensemble d'éléments HTML.
   </main>
   ```
   
-### Définir la grille dans le CSS
+### 6.2. Définir la grille dans le CSS
 
-#### Pour le conteneur de la grille
+#### 6.2.1. Pour le conteneur de la grille
 
 Maintenant que la grille est définie dans le HTML, il faut la définir dans le CSS. On commence par ajouter des propriétés au conteneur de la grille :
 
@@ -633,7 +654,7 @@ main {
 }
 ```
 
-#### Pour les éléments de la grille
+#### 6.2.2. Pour les éléments de la grille
 
 Ensuite, il faut ajouter des propriétés aux éléments de la grille pour les placer dans les zones définies dans le conteneur de la grille. Pour cela, on utilise la propriété `grid-area` en indiquant le nom de la zone à laquelle l'élément doit être associé.
 
@@ -659,7 +680,7 @@ footer {
 }
 ```
 
-### Quelques erreurs fréquentes dans la réalisation de la grille CSS
+### 6.3. Quelques erreurs fréquentes dans la réalisation de la grille CSS
 
 - Oublier d'ajouter la propriété `display: grid` au conteneur de la grille, ce qui fait que les propriétés de grille ne sont pas appliquées et que les éléments ne sont pas organisés en grille.
 - Oublier de définir les zones de la grille avec la propriété `grid-template-areas`, ce qui rend plus difficile le placement des éléments dans la grille.
@@ -679,7 +700,7 @@ footer {
 - Oublier d'ajouter la propriété `gap` pour définir l'espacement entre les éléments de la grille, ce qui peut rendre la mise en page plus serrée et moins lisible.
 - Oublier de définir la taille des colonnes avec la propriété `grid-template-columns`, ce qui peut faire que les colonnes ne sont pas de la bonne taille et que la mise en page ne correspond pas à la capture d'écran attendue.
 
-## Correction du sujet
+## 7. Correction du sujet
 
 La méthode de correction que j'ai utilisée pour corriger ce sujet est la suivante :
 
