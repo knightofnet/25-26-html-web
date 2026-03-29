@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, sans-serif;
+	font-size: 100%;
+    margin: 0;
+    padding: 0;
+	background-color: #f4f4f4;
+	color:black;
+}
+header, footer {
+    background-color: #403874;
+    color: white;
+    text-align: center;
+    height: 40px;
+    line-height: 30px;
+    width: 100%;
+    position: relative;
+	clear:both;	
+}
+h1{
+	color: #7d86c1;
+	text-transform: uppercase;
+}
+h2{
+	color: #7d86c1;
+}
+.header-message, .footer-message {
+    margin: 0;
+    font-size: 80%;
+}
+
+.content {
+    padding: 30px; /* Marge de 30px autour du contenu */
+    margin-left:300px;
+}
+nav {
+	text-decoration: none;
+    color: white;
+	float : left;
+    width: 300px;
+    display: block;
+	height:500px;
+}
+#menu {
+	padding-left: 5px;
+}
+#menu li {
+	list-style: none;
+    margin: 5px 5px 5px 0px; background-color : #403874;  height:30px; line-height:20px;
+	margin-left: 0;
+	padding-left: 5px;
+}
+  
+#menu a {
+    text-decoration: none;
+	color: white;
+  }
+#menu li:hover{background-color : #bfb7e6;}
+
+
+.form-container fieldset {
+    width:50%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.form-container input[type="submit"] {
+    background-color:#403874;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+	text-align: center;
+}
+
+#nom, label {  
+    width: 60%;
+}
+
+table {
+  border-collapse: collapse;
+}
+thead {
+	background-color: #7d86c1;
+}
+table, th, td {
+  padding:5px;
+}
+.ligne2{
+  background-color: #bfb7e6;
+}
+
+.gras {font-weight:bold;}
+.rouge {color:red;}
+.vert {color:green;}
+
+

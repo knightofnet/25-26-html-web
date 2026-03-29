@@ -1,7 +1,5 @@
 <?php
 
-// A continuer lors du TP6 !
-
 require_once("db.inc.php"); // sur Celene, contient fonction connexion()
 require_once('html.inc.php'); // sur Celene,
 
@@ -43,15 +41,26 @@ function selectJoueurs($db)
  */
 function afficheJoueurs($res)
 {
-	echo "<b>idPersonnne nomPersonne</b><br>";
 	// Affichage des données retournées par la requête SQL
 	// $res est un objet de type PDOStatement qui permet de parcourir les données retournées par la requête
 	// grâce à la méthode fetch() qui retourne une ligne de résultat à chaque appel, ou false s'il n'y a plus de ligne à retourner	
 
-	// A continuer lors du TP6 !
+	echo '<table>
+			<thead>
+				<tr><th>idPersonne</th><th>nomPersonne</th></tr>
+			</thead>
+			<tbody>';
+
+	$ix = 0;
 	while ($ligne = $res->fetch()) {
-		echo "" . $ligne['idpersonne'] . " " . $ligne['nompersonne'] . "<br>";
+
+		$classHtml = ($ix % 2 == 0) ? '' : 'ligne2';
+		echo "<tr class=\"$classHtml\"><td>" . $ligne['idpersonne'] . "</td><td>" . $ligne['nompersonne'] . "</td></tr>";
+
+		$ix++;
 	}
+	echo '	</tbody>
+		  </table>';
 }
 
 //code principal
