@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"
+    >
+    <title>Ajout de produit</title>
+    <link rel="stylesheet" href="ex3.css">
+</head>
+<body>
+<div class="content">
+    <section>
+        <div id="d1">
+            <h1>Ajout d'un nouvel article en stock</h1>
+        </div>
+        <div class="form-container">
+            <form action="ex3.php" method="post">
+                <label for="ref">Référence:</label>
+                <input type="text" id="ref" name="ref" placeholder=
+                        "Référence article en MAJUSCULES"><br>
+                <label for="des">Désignation:</label>
+                <input type="text" id="des" name="des" placeholder=
+                        "Désignation"><br>
+                <label for="dateEntree">Date d'entrée en stock:
+                </label>
+                <input type="text" id="dateEntree" name="dateEntree"
+                       placeholder="__/__/____"><br>
+
+                <label for="fourn">Fournisseur:</label>
+                <select name="fourn" id="fourn">
+                    <option value="hp">HP</option>
+                    <option value="cisco">CISCO</option>
+                    <option value="dell">Dell</option>
+                    <option value="verb">Verbatim</option>
+                    <option value="asus">Asus</option>
+                </select><br>
+                <label for="prix">Prix:</label>
+                <input type="text" id="prix" name="prix" placeholder=
+                        "Prix"><br>
+                <label for="qtestk">Quantité en stock:</label>
+                <input type="text" id="qtestk" name="qtestk"
+                       placeholder="Quantité"><br>
+                <fieldset>
+                    <legend>Rangement</legend>
+                    <label for="allee">Allée:</label>
+                    <input type="text" id="allee" name="allee" size=5
+                    >
+                    <label for="etag"> Etagère:</label>
+                    <input type="text" id="etag" name="etag" size=5>
+                    <label for="case">Casier:</label>
+                    <input type="text" id="case" name="case" size=5>
+                </fieldset>
+                <br>
+
+                <input class="bouton" type="submit" value="Ajouter au stock">
+                <input class="bouton" type="reset" name="reset" value="Annuler"/>
+
+            </form>
+        </div>
+
+    </section>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+	font-size: 100%;
+    margin: 0;
+    padding: 0;
+	background-color: #f4f4f4;
+	color:black;
+}
+header, footer {
+    background-color: #c0e0e9;
+    color: white;
+    text-align: center;
+    height: 40px;
+    line-height: 30px;
+    width: 100%;
+    position: relative;
+	
+}
+h1{
+	color: #263f8c;
+	text-transform: uppercase;
+}
+h2{
+	color: #263f8c;
+}
+.header-message, .footer-message {
+    margin: 0;
+    font-size: 80%;
+}
+
+.content {
+    padding: 30px; /* Marge de 30px autour du contenu */
+    margin-left:300px;
+}
+.image{
+    width:180px;
+    height:80px; 
+	float:left;
+}
+li {margin: 10px}
+#nom,#email,#description,#dateNaiss,#tel,
+.form-container fieldset {
+    width:50%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.form-container input[type="submit"] {
+    background-color:#263f8c;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+	text-align:center;
+}
+
+
+fieldset label {  
+    width: 100%;
+}
+
+table {
+  border-collapse: collapse;
+  margin-left: 30px;
+}
+thead {
+	background-color: #6267d9;
+}
+table, th, td {
+  padding:5px;
+}
+.gras {font-weight:bold;}
+.rouge {color:red;}
+
+
+

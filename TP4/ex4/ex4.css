@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+	font-size: 100%;
+    margin: 0;
+    padding: 0;
+	background-color: #a9d6e5;
+	color:#012a4a;
+}
+h1{
+	color: #012a4a;
+	text-transform: uppercase;
+}
+h2{
+	color: #014f86;
+}
+.content {
+    padding: 10px; 
+    margin-left:50px;
+}
+#dateDep,#dateArr,#hrDep,#hrArr,#classe,#nbAd,#nbEnf,.bouton
+.form-container fieldset {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+fieldset{width: 35%;}
+#hrDep {width: 4em}
+#hrArr {width: 4em}
+#dateDep {width: 5em}
+#dateArr {width: 5em}
+#classe {width: 20em}
+#nbAd {width: 4em}
+#nbEnf {width: 5em}
+
+fieldset label {  
+    width: 50%;
+}
+
+table {
+  border-collapse: collapse;
+  margin-left: 30px;
+}
+thead {
+	background-color: #6267d9;
+}
+table, th, td {
+  padding:5px;
+}
+.gras {font-weight:bold;}
+.rouge {color:red;}
+
+
+

@@ -1,0 +1,24 @@
+	.nb {
+		width : 40px;
+	}
+	.bloc {
+		width : 300px;
+	}
+	body {
+		background-color : #ccc;
+	}
+	#page {
+		width : 800px;
+		background-color : #fff;
+		margin : 20px;
+		padding : 20px;
+	}
+	.image {
+		text-align : center;
+	}
+	.image img {
+		width : 300px;
+	}
+	hr {
+		width : 60%;
+	}

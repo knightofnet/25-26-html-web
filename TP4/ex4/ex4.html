@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"
+>
+    <title>Trouver un vol</title>
+    <link rel="stylesheet" href="ex4.css">
+</head>
+<body>
+	<div class="content">
+    <section>
+		    <div id="d1">
+			<h1>Trouver un vol</h1>
+			</div>
+			<div class="form-container">
+				<fieldset>
+                <form action="ex4.php" method="post">
+					<label for="dateDep">Date de départ:
+</label>
+                    <input type="text" id="dateDep" name="dateDep" 
+placeholder="JJ/MM/AAA" >
+					<label for="hrDep">Heure de départ:
+</label>
+                    <input type="text" id="hrDep" name="hrDep" 
+placeholder="HH:MM" > <br>
+
+					<label for="dateArr">Date d'arrivée:
+</label>
+                    <input type="text" id="dateArr" name="dateArr" 
+placeholder="JJ/MM/AAA" >
+					<label for="hrArr">Heure d'arrivée:
+</label>
+                    <input type="text" id="hrArr" name="hrArr" 
+placeholder="HH:MM" > <br>
+					<label for="classe">Classe:</label>
+					<select name="classe" id="classe">
+						<option value="eco">Eco</option>
+						<option value="ecop">Eco Premium</option>
+						<option value="aff">Affaires</option>
+						<option value="pclas">Première Classe</option>
+					</select><br>               
+                    <label for="nbAd">Nombre d'adultes:</label>
+                    <input type="text" id="nbAd" name="nbAdd"> <br>
+					<label for="nbEnf">Nombre d'enfants:</label>
+                    <input type="text" id="nbEnf" name="nbEnf"> <br>
+
+                    <input class="bouton" type="submit" value="Rechercher un vol">
+					
+                </form>
+				</fieldset>
+			</div>
+         
+	</section>
+	</div>
+
+
+
+</body>
+</html>

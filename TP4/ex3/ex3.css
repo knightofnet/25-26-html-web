@@ -1,0 +1,66 @@
+body {
+    font-family: Arial, sans-serif;
+	font-size: 100%;
+    margin: 0;
+    padding: 0;
+	background-color: #eae2b7;
+	color:#d62828;
+}
+h1{
+	color: #d62828;
+	text-transform: capitalize;
+}
+h2{
+	color: #d62828;
+}
+.content {
+    padding: 10px; 
+    margin-left:50px;
+}
+.image{
+    width:180px;
+    height:80px; 
+	float:left;
+}
+li {margin: 10px}
+#ref,#des,#dateEntree,#fourn,#prix,#qtestk,
+.form-container fieldset {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+fieldset{width: 25%;}
+#ref {width: 15em}
+#des {width: 30em}
+#dateEntree {width: 5em}
+#fourn {width: 20em}
+#qtestk {width: 5em}
+#prix {width: 5em}
+.bouton {
+    background-color:#f77f00;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+	text-align:center;
+}
+
+
+fieldset label {  
+    width: 50%;
+}
+
+table {
+  border-collapse: collapse;
+  margin-left: 30px;
+}
+thead {
+	background-color: #6267d9;
+}
+table, th, td {
+  padding:5px;
+}
+.gras {font-weight:bold;}
+.rouge {color:red;}
+
+
+
