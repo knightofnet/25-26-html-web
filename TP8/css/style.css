@@ -1,0 +1,272 @@
+body {
+    font-family: Arial, sans-serif;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #a9d6e5;
+    color: #012a4a;
+}
+
+h1 {
+    color: #012a4a;
+    text-transform: uppercase;
+
+
+    background: linear-gradient(90deg, #a51050, #cb1c42 50.48%, #f57461);
+    background-position: bottom 0 left;
+    background-repeat: no-repeat;
+    background-size: 100% 11px;
+
+    width: 50%;
+
+}
+
+h2 {
+    color: #014f86;
+}
+
+a {
+    color : #007ce7;
+    text-decoration: none;
+}
+
+
+.nav-links a {
+    text-decoration: none;
+    background: linear-gradient(90deg, #007ce7, #56c5e7 50.48%, #007ce7), linear-gradient(90deg, #007ce7, #56c5e7 50.48%, #007ce7);
+    background-position: bottom 0 center, top 0 center;
+    background-repeat: no-repeat;
+    background-size: 90% 1px;
+    height: 20px;
+
+    display: inline-block;
+
+    margin-right : 1rem;
+}
+
+.nav-links a:hover {
+    transition: background-size 0.3s ease;
+    background-size: 100% 1px;
+}
+
+.content {
+    padding: 10px;
+    margin-left: 50px;
+}
+
+.form-container fieldset {
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    padding : 10px;
+
+    border : 1px solid #007ce7;
+    border-radius: 5px;
+
+    background-color: rgba(255,255,255,10%);
+}
+
+.form-container fieldset label {
+    width: 50%;
+}
+
+.form-container .form-elt {
+    padding: 10px;
+}
+
+.form-container .form-elt:hover {
+    background-color: rgba(255, 255, 255, 10%);
+    box-shadow: 0 4px 8px rgba(1, 42, 74, 0.1);
+}
+
+
+#hrDep, #hrArr, #dateDep, #dateArr {
+    width: 6em
+}
+
+
+#classe {
+    width: 20em
+}
+
+#nbAd {
+    width: 4em
+}
+
+#nbEnf {
+    width: 5em
+}
+
+.form-container .bouton {
+    margin-top : 1rem;
+    padding : 10px;
+    background-color: #56c5e7;
+    color : white;
+    border-radius: 5px;
+
+    border : 1px solid rgba(1, 42, 74, 0.12);
+    cursor : pointer;
+
+}
+.form-container .bouton:hover {
+    background-color: #56c5e7;
+    box-shadow: 0 4px 8px rgba(1, 42, 74, 0.1);
+}
+
+.gras {
+    font-weight: bold;
+}
+
+.rouge {
+    color: red;
+}
+
+.error {
+    background-color: #ffdbdb;
+    color : red;
+    border : 1px solid red;
+    border-radius: 2px;
+    padding : 5px;
+}
+
+.mb {
+    padding-bottom : 1rem;
+}
+
+.grid-vols-memorises {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(260px, 1fr));
+    gap: 1rem;
+    align-items: start;
+}
+
+.grid-vols-memorises-2cols {
+    grid-template-columns: repeat(2, minmax(260px, 1fr));
+}
+
+.carte-vol {
+    /* look & feel boarding pass */
+    border-radius: 10px;
+    border: 1px solid rgba(1, 42, 74, 0.12);
+    background: linear-gradient(180deg, #ffffff 0%, #f6fbff 100%);
+    padding: 14px 16px;
+    box-shadow: 0 8px 20px rgba(1, 42, 74, 0.06);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 12px;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* perforation / separation visual */
+.carte-vol::before {
+    content: "";
+    position: absolute;
+    top: 12%;
+    bottom: 12%;
+    right: 34%;
+    width: 1px;
+    border-right: 2px dashed rgba(1, 42, 74, 0.12);
+    transform: translateX(50%);
+    pointer-events: none;
+}
+
+/* left side: main infos */
+.carte-vol-dates,
+.carte-vol-nbr {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.carte-vol-dates p,
+.carte-vol-classe p,
+.carte-vol-nbr p {
+    margin: 0;
+    line-height: 1.1;
+}
+
+.carte-vol-dates p:first-child {
+    font-size: 0.9rem;
+    color: #014f86;
+    font-weight: 700;
+}
+
+.carte-vol-dates p:not(:first-child) {
+    font-size: 0.85rem;
+    color: #274156;
+}
+
+/* right side: compact info block */
+.carte-vol-classe {
+    text-align: right;
+    min-width: 110px;
+}
+
+.carte-vol-classe p {
+    margin: 0;
+    color: #012a4a;
+    font-weight: 700;
+}
+
+.carte-vol-nbr {
+    display: flex;
+    gap: 12px;
+}
+
+.carte-vol-nbr > div {
+    background: rgba(1, 42, 74, 0.03);
+    padding: 6px 10px;
+    border-radius: 6px;
+    text-align: center;
+    min-width: 60px;
+}
+
+.carte-vol-nbr p:first-child {
+    font-size: 0.7rem;
+    color: #506d85;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 4px;
+}
+
+.carte-vol-nbr p:last-child {
+    font-weight: 700;
+    color: #012a4a;
+}
+
+
+/* small responsive tweaks */
+@media (max-width: 768px) {
+
+    .grid-vols-memorises, .grid-vols-memorises-2cols  {
+        grid-template-columns: repeat(1, minmax(260px, 1fr));
+    }
+
+    .carte-vol {
+        grid-template-columns: 1fr;
+    }
+
+    .carte-vol::before {
+        display: none;
+    }
+
+    .carte-vol-classe {
+        text-align: left;
+    }
+}
+
+
+footer {
+    background-color: #012a4a;
+    width: 100vw;
+    color: white;
+
+    text-align: center;
+
+    position: fixed;
+    bottom: 0;
+    height: 5vh;
+}
+
