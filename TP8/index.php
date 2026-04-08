@@ -2,6 +2,7 @@
 require_once('php/config.php');
 
 require_once(PROJECT_ROOT .'/php/funcs/aide_affichage_func.php');
+require_once(PROJECT_ROOT .'/php/funcs/session_func.php');
 require_once(PROJECT_ROOT .'/php/services/vols_services.php');
 
 
